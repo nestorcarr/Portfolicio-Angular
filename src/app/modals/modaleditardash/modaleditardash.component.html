@@ -1,0 +1,31 @@
+<!-- Modal -->
+<div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title text-dark fs-5" id="staticBackdropLabel4">Modifique el nombre o su titulo</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+      </div>
+      <div class="modal-body letra">
+        <form [formGroup]="form">
+          <div class="form-floating">
+            <input type="text" class="form-control border mb-2" id="floatingPassword2" placeholder="nombre">
+            <label for="floatingPassword2">Nombre</label>
+          </div>
+          <div class="form-floating">
+            <input type="text" class="form-control border mb-2" id="floatingPassword22" placeholder="apellido">
+            <label for="floatingPassword22">Apellido</label>
+          </div>
+          <div class="form-floating">
+            <input type="text" class="form-control border" id="floatingPassword222" placeholder="titulo">
+            <label for="floatingPassword222">Titulo</label>
+          </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+        </form>
+
+    </div>
+  </div>
+</div>

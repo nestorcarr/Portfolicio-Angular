@@ -1,0 +1,99 @@
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+
+            <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" formControlName="email" [class.border-success]="MailValid" [class.border-danger]="MailInvalid" class="form-control" id="email" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">Nunca compartiremos tu correo electrónico con nadie más..</div>
+                </div>
+                <!--Gracias al getter que configuramos en el controlador-->
+                <div *ngIf="Mail?.errors && Mail?.touched">
+                  <p *ngIf="Mail?.hasError('required')" class="error">
+                    El mail es requerido.
+                  </p>
+                  <p *ngIf="Mail?.hasError('email')" class="error">
+                    El mail debe ser valido.
+                  </p>
+                </div>
+                <div class="row g-3 align-items-center mb-3">
+                    <div class="col-auto">
+                        <label for="exampleInputPassword1" class="col-form-label">Password</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="password" id="exampleInputPassword1" formControlName="password" [class.border-success]="PasswordValid" [class.border-danger]="PasswordInvalid" class="form-control" aria-describedby="passwordHelpInline" >
+                    </div>
+                </div>
+                    <!--Gracias al getter que configuramos en el controlador-->
+                <div *ngIf="Password?.errors && Password?.touched">
+                  <p *ngIf="Password?.hasError('required')" class="error">
+                    El password es requerido.
+                  </p>
+                  <p *ngIf="Password?.errors?.['minlength']" class="error">
+                    El password debe tener entre 8 y 20 caracteres.
+                  </p>
+                  <p *ngIf="Password?.errors?.['maxlength']" class="error">
+                    El password debe tener entre 8 y 20 caracteres.
+                  </p>
+                </div>
+                <!--</div>
+                    <div class="col-auto">
+                        <span id="passwordHelpInline" class="form-text">
+                            Debe tener entre 8 y 20 caracteres.
+                        </span>
+                    </div>
+                </div>-->
+                <!--<div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Aceptar</label>
+                </div>-->
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary">Iniciar sesion</button>
+                </div>
+            </form>
+            <!--Esto muestra el mail y el password debajo, luego borrar-->
+            <div>
+              <p><strong>{{ form.value.email }}</strong>---<strong>{{ form.value.password }}</strong></p>
+            </div>
+
+              <!--<form>
+                  <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <div id="emailHelp" class="form-text">Nunca compartiremos tu correo electrónico con nadie más..</div>
+                  </div>
+                  <div class="row g-3 align-items-center">
+                      <div class="col-auto">
+                          <label for="inputPassword6" class="col-form-label">Password</label>
+                      </div>
+                      <div class="col-auto">
+                          <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                      </div>
+                      <div class="col-auto">
+                          <span id="passwordHelpInline" class="form-text">
+                              Debe tener entre 8 y 20 caracteres.
+                          </span>
+                      </div>
+                  </div>
+                  <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Aceptar</label>
+                  </div>
+              </form>-->
+
+          </div>
+          <!--<div class="modal-footer">
+              <button type="button" class="btn btn-primary">Iniciar sesion</button>
+          </div>-->
+      </div>
+  </div>
+</div>

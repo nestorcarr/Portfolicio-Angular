@@ -1,0 +1,40 @@
+<div class="modal fade" id="exampleModal10" tabindex="-1" aria-labelledby="exampleModalLabel10" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title text-dark fs-5" id="staticBackdropLabel10">Modifique su educación</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+        </div>
+        <div class="modal-body letra">
+          <form [formGroup]="form">
+            <div class="form-group">
+              <label for="cambiar_foto"></label>
+              <input type="file" id="cambiar_foto">
+              <p class="help-block py-3"></p>
+            </div>
+            <div class="form-floating">
+              <input type="text" class="form-control border mb-2" id="floatingPassword305" placeholder="Universidad">
+              <label for="floatingPassword305">Universidad</label>
+            </div>
+            <div class="form-floating">
+              <input type="text" class="form-control border mb-2" id="floatingPassword306" placeholder="Institución">
+              <label for="floatingPassword306">Institución</label>
+            </div>
+            <div class="form-floating">
+              <input type="text" class="form-control border" id="floatingPassword307" placeholder="Título">
+              <label for="floatingPassword307">Título</label>
+            </div>
+            <div class="form-floating">
+              <input type="text" class="form-control border" id="floatingPassword308" placeholder="Estado">
+              <label for="floatingPassword308">Estado</label>
+            </div>
+           
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+              <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>

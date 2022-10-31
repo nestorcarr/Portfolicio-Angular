@@ -1,0 +1,37 @@
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel6" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title text-dark fs-5" id="staticBackdropLabel6">Modifique su historia</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+        </div>
+        <div class="modal-body letra">
+          <form [formGroup]="form">
+            <div class="form-floating">
+              <input type="text" class="form-control border mb-2" id="floatingPassword2" placeholder="nombre">
+              <label for="floatingPassword2">Nombre</label>
+            </div>
+            <div class="form-floating">
+              <input type="text" class="form-control border mb-2" id="floatingPassword22" placeholder="apellido">
+              <label for="floatingPassword22">Apellido</label>
+            </div>
+            <div class="form-floating">
+              <input type="text" class="form-control border" id="floatingPassword222" placeholder="titulo">
+              <label for="floatingPassword222">Titulo</label>
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label"></label>
+              <textarea class="form-control border" id="exampleFormControlTextarea12" rows="3" placeholder="Virtud" ></textarea>
+            </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+          </div>
+          </form>
+      </div>
+    </div>
+  </div>

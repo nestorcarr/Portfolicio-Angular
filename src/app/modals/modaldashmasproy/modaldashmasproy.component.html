@@ -1,0 +1,51 @@
+<!-- Modal -->
+<div class="modal fade letra" id="exampleModal600" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel600" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel600">Agregar</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+          </div>
+          <div class="modal-body letra">
+
+              <form [formGroup]="form">
+                <div class="form-group">
+                  <label for="agregar_logo600"></label>
+                  <input type="file" id="agregar_logo600">
+                  <p class="help-block py-3"></p>
+                </div>
+                    <div class="form-floating">
+                      <input type="text" class="form-control border mb-2" id="floatingPassword601" placeholder="Institución">
+                      <label for="floatingPassword601">Institución</label>
+                    </div>
+                    <div class="form-floating">
+                      <input type="text" class="form-control border mb-2" id="floatingPassword602" placeholder="Proyecto">
+                      <label for="floatingPassword602">Proyecto</label>
+                    </div>
+                    <div class="form-floating">
+                      <input type="text" class="form-control border" id="floatingPassword603" placeholder="Título">
+                      <label for="floatingPassword603">Título</label>
+                    </div>
+                    <div class="form-floating">
+                      <input type="text" class="form-control border mb-2" id="floatingPassword604" placeholder="Año">
+                      <label for="floatingPassword604">Año</label>
+                    </div>
+                    <div class="form-floating">
+                      <input type="text" class="form-control border" id="floatingPassword605" placeholder="Estado">
+                      <label for="floatingPassword605">Estado</label>
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="exampleFormControlTextarea1" class="form-label"></label>
+                      <textarea class="form-control border" id="exampleFormControlTextarea12" rows="3" placeholder="Tema" ></textarea>
+                    </div>
+
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
